@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Signup from '../components/Forms/Signup.astro';
+import { AstroSeo } from '@astrolib/seo';
+---
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Log in"
+  description="Semmar repuestos"
+  canonical=""
+  openGraph={{
+    url: '',
+    title: 'Open Graph Title',
+    description: 'Open Graph Description',
+    images: [
+      {
+        url: 'social-og',
+        width: 1200,
+        height: 630,
+        alt: 'Social open graph',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'twitter-og',
+        width: 4096,
+        height: 4096,
+        alt: 'Twitter open graph',
+        type: 'image/jpeg',
+      },
+      { url: 'social-og-img' },
+      { url: 'twitter-og-img' },
+    ],
+    site_name: 'YourSitesName',
+  }}
+  twitter={{
+    handle: '@pepito1234',
+    site: '@site',
+    cardType: 'summary_large_image',
+  }}
+/>
+<BaseLayout>
+  <Signup />
+</BaseLayout>
